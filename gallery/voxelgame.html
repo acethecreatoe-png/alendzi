@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VoxelTerria Gallery</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #3a3a3a 0%, #1e1e1e 100%);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            margin: 0 0 30px 0;
+            color: #222;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .gallery-item {
+            border: 3px solid #000;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 2px solid #333;
+            background: #000;
+        }
+
+        .caption {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VoxelTerria Gallery</h1>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="https://alendzisupply.nekoweb.org/cave_game_screenshot_2026-01-04_17-17-51.png" alt="VoxelTerria Screenshot">
+                <div class="caption">Build 0.8</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://alendzisupply.nekoweb.org/Screenshot%202026-01-01%20211137.png" alt="VoxelTerria Screenshot">
+                <div class="caption">First ever build — 01/01/2026</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://alendzisupply.nekoweb.org/Screenshot%202026-01-05%20212827.png" alt="VoxelTerria Screenshot">
+                <div class="caption">Wood material introduced</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://alendzisupply.nekoweb.org/Screenshot%202026-01-09%20233939.png" alt="VoxelTerria Screenshot">
+                <div class="caption">Sand block added</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://alendzisupply.nekoweb.org/Screenshot%202026-01-09%20231122.png" alt="VoxelTerria Screenshot">
+                <div class="caption">Wooden planks implemented</div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            VoxelTerria — closed alpha development
+        </div>
+    </div>
+
+</body>
+</html>
