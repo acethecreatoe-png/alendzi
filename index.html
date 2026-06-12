@@ -25,7 +25,14 @@
             width: 400px; /* Narrower width */
             border: 1px solid #000000;
         }
+        #flash-container {
+            width: 350px;
+            height: 254px; /* 350 * 400/550 to preserve aspect ratio */
+            margin: 0 auto;
+        }
     </style>
+
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
     <div class="content-box">
@@ -44,9 +51,22 @@
     </div>
 
     <div class="content-box">
-        <h1>My Latest Animation</h1>
+        <h1>News</h1>
         <div style="text-align: center;">
-            <iframe width="350" height="262" src="https://www.youtube.com/embed/3KUsgQDzTEo" frameborder="0" allowfullscreen></iframe>
+            <div id="flash-container"></div>
         </div>
     </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", () => {
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            player.style.width = "100%";
+            player.style.height = "100%";
+            let container = document.getElementById("flash-container");
+            container.appendChild(player);
+            player.load("https://github.com/acethecreatoe-png/alendzi/raw/refs/heads/main/News%206122026.swf");
+        });
+    </script>
 </body></html>
