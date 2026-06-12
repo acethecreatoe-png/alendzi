@@ -25,23 +25,7 @@
             width: 400px; /* Narrower width */
             border: 1px solid #000000;
         }
-        #flash-crop {
-            width: 350px;
-            height: 262px; /* 350 * 3/4 = 262.5, 4:3 ratio */
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-        }
-        #flash-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
     </style>
-
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
     <div class="content-box">
@@ -62,22 +46,7 @@
     <div class="content-box">
         <h1>My Latest Animation</h1>
         <div style="text-align: center;">
-            <div id="flash-crop">
-                <div id="flash-container"></div>
-            </div>
+            <iframe width="350" height="262" src="https://www.youtube.com/embed/3KUsgQDzTEo" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
-
-    <script>
-        window.RufflePlayer = window.RufflePlayer || {};
-        window.addEventListener("DOMContentLoaded", () => {
-            let ruffle = window.RufflePlayer.newest();
-            let player = ruffle.createPlayer();
-            player.style.width = "100%";
-            player.style.height = "100%";
-            let container = document.getElementById("flash-container");
-            container.appendChild(player);
-            player.load("https://raw.githubusercontent.com/acethecreatoe-png/alendzi/main/145693_BENDEESTICK_7.swf");
-        });
-    </script>
 </body></html>
