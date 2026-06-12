@@ -1,6 +1,6 @@
 <html><head>
     <meta charset="UTF-8">
-    <title>Alen's World (Basement)</title>
+    <title>The Bazement</title>
     
     <style>
         body {
@@ -9,18 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-
         h1 {
             text-align: center;
             background-color: #008800;
             padding: 5px;
             font-size: large;
         }
-
         a {
             color: #7FFFD4;
         }
-
         .content-box {
             background-color: #00AA00;
             padding: 15px;
@@ -29,11 +26,12 @@
             border: 1px solid #000000;
         }
     </style>
-</head>
 
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
 <body>
     <div class="content-box">
-        <h1>Welcome to Alen's World</h1>
+        <h1>Welcome to The Bazement</h1>
         
         <p>This site revolves around my <strong>stickfigure</strong> animations and <em>comics</em> sometimes.</p>
         <p>Here you can see my terrible 2000s styled animations.</p>
@@ -42,8 +40,7 @@
     <div class="content-box">
         <h1>My Latest Animation</h1>
         <div style="text-align: center;">
-            <!-- Adjusted iframe width to fit inside the 400px box -->
-            <iframe allowfullscreen="" src="https://www.vidlii.com/embed?v=Vb8Z0DnHIq3&amp;a=0" frameborder="0" width="350" height="200"></iframe>
+            <div id="flash-container" style="width:350px; height:200px; margin:0 auto;"></div>
         </div>
         
         <div style="text-align: center; margin-top: 20px;">
@@ -53,4 +50,16 @@
         </div>
     </div>
 
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", () => {
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            player.style.width = "100%";
+            player.style.height = "100%";
+            let container = document.getElementById("flash-container");
+            container.appendChild(player);
+            player.load("https://raw.githubusercontent.com/acethecreatoe-png/alendzi/main/145693_BENDEESTICK_7.swf");
+        });
+    </script>
 </body></html>
